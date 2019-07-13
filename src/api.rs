@@ -5,11 +5,7 @@
 // or http://opensource.org/licenses/MIT>, at your option. This file may not be
 // copied, modified, or distributed except according to those terms.
 
-//! An API to interact with [Searchfox](https://searchfox.org).
-//!
-//! Searchfox is an index used for Mozilla's source code repositories,
-//! including mozilla-central where Firefox is developed.
+pub mod response;
 
-mod api;
-
-pub use crate::api::response::*;
+#[cfg(test)]
+mod test_response;

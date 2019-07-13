@@ -1,0 +1,371 @@
+{
+    "*timedout*": false,
+    "*title*": "BrowserChild",
+    "generated": {
+        "Files": [
+            {
+                "lines": [],
+                "path": "__GENERATED__/dist/include/nsIBrowserChild.h"
+            },
+            {
+                "lines": [],
+                "path": "__GENERATED__/ipc/ipdl/PBrowserChild.cpp"
+            },
+            {
+                "lines": [],
+                "path": "__GENERATED__/ipc/ipdl/_ipdlheaders/mozilla/dom/PBrowserChild.h"
+            }
+        ],
+        "Uses (BrowserChild)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            50,
+                            62
+                        ],
+                        "context": "mozilla::dom::PBrowserChild::SendPDocAccessibleConstructor",
+                        "contextsym": "_ZN7mozilla3dom13PBrowserChild29SendPDocAccessibleConstructorEPNS_4a11y19PDocAccessibleChildERKyRKjS8_",
+                        "line": "return SendPDocAccessibleConstructor((static_cast<BrowserChild*>(this))->AllocPDocAccessibleChild(aP",
+                        "lno": 418
+                    },
+                    {
+                        "bounds": [
+                            49,
+                            61
+                        ],
+                        "context": "mozilla::dom::PBrowserChild::SendPPluginWidgetConstructor",
+                        "contextsym": "_ZN7mozilla3dom13PBrowserChild28SendPPluginWidgetConstructorEv",
+                        "line": "return SendPPluginWidgetConstructor((static_cast<BrowserChild*>(this))->AllocPPluginWidgetChild());",
+                        "lno": 476
+                    }
+                ],
+                "path": "__GENERATED__/ipc/ipdl/PBrowserChild.cpp"
+            }
+        ]
+    },
+    "normal": {
+        "Declarations (BrowserChild)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            6,
+                            18
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "class BrowserChild;",
+                        "lno": 29
+                    },
+                    {
+                        "bounds": [
+                            6,
+                            18
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "class BrowserChild;",
+                        "lno": 47
+                    }
+                ],
+                "path": "dom/base/TabGroup.h"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            6,
+                            18
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "class BrowserChild;",
+                        "lno": 151
+                    }
+                ],
+                "path": "dom/base/nsContentUtils.h"
+            }
+        ],
+        "Declarations (BrowserChildMessageManager)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            6,
+                            18
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "class BrowserChildMessageManager;",
+                        "lno": 21
+                    }
+                ],
+                "path": "dom/base/nsWrapperCache.h"
+            }
+        ],
+        "Declarations (mozilla::dom::BrowserChild::BrowserChild)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            0,
+                            12
+                        ],
+                        "context": "mozilla::dom::BrowserChild",
+                        "contextsym": "T_mozilla::dom::BrowserChild",
+                        "line": "BrowserChild(ContentChild* aManager, const TabId& aTabId, TabGroup* aTabGroup,",
+                        "lno": 189,
+                        "peekLines": "/**\n * Create a new BrowserChild object.\n */\nBrowserChild(ContentChild* aManager, const TabId& aTabId, TabGroup* aTabGroup,\n             const TabContext& aContext, BrowsingContext* aBrowsingContext,\n             uint32_t aChromeFlags, bool aIsTopLevel);\n"
+                    }
+                ],
+                "path": "dom/ipc/BrowserChild.h"
+            }
+        ],
+        "Definitions (BrowserChild)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            6,
+                            18
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "class BrowserChild final : public nsMessageManagerScriptExecutor,",
+                        "lno": 149,
+                        "peekLines": "/**\n * BrowserChild implements the child actor part of the PBrowser protocol. See\n * PBrowser for more information.\n */\nclass BrowserChild final : public nsMessageManagerScriptExecutor,\n                           public ipc::MessageManagerCallback,\n                           public PBrowserChild,\n                           public nsIWebBrowserChrome2,\n                           public nsIEmbeddingSiteWindow,\n                           public nsIWebBrowserChromeFocus,\n                           public nsIInterfaceRequestor,\n                           public nsIWindowProvider,\n                           public nsSupportsWeakReference,\n                           public nsIBrowserChild,\n                           public nsIObserver,\n                           public nsIWebProgressListener2,\n                           public TabContext,\n                           public nsITooltipListener,\n                           public mozilla::ipc::IShmemAllocator {\n"
+                    }
+                ],
+                "path": "dom/ipc/BrowserChild.h"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            35,
+                            47
+                        ],
+                        "context": "mozilla::widget::PuppetWidget",
+                        "contextsym": "T_mozilla::widget::PuppetWidget",
+                        "line": "typedef mozilla::dom::BrowserChild BrowserChild;",
+                        "lno": 46
+                    }
+                ],
+                "path": "widget/PuppetWidget.h"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            35,
+                            47
+                        ],
+                        "context": "nsIWidget",
+                        "contextsym": "T_nsIWidget",
+                        "line": "typedef mozilla::dom::BrowserChild BrowserChild;",
+                        "lno": 336
+                    }
+                ],
+                "path": "widget/nsIWidget.h"
+            }
+        ],
+        "Definitions (BrowserChildMap)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            56,
+                            68
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "typedef nsDataHashtable<nsUint64HashKey, BrowserChild*> BrowserChildMap;",
+                        "lno": 174
+                    }
+                ],
+                "path": "dom/ipc/BrowserChild.cpp"
+            }
+        ],
+        "Files": [
+            {
+                "lines": [],
+                "path": "dom/base/InProcessBrowserChildMessageManager.cpp"
+            },
+            {
+                "lines": [],
+                "path": "dom/base/InProcessBrowserChildMessageManager.h"
+            },
+            {
+                "lines": [],
+                "path": "dom/interfaces/base/nsIBrowserChild.idl"
+            },
+            {
+                "lines": [],
+                "path": "dom/ipc/BrowserChild.cpp"
+            },
+            {
+                "lines": [],
+                "path": "dom/ipc/BrowserChild.h"
+            }
+        ],
+        "Textual Occurrences": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            20,
+                            32
+                        ],
+                        "line": "    // constructing BrowserChild's, layer trees, etc, by showing a blank",
+                        "lno": 360
+                    }
+                ],
+                "path": "browser/modules/AsyncTabSwitcher.jsm"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            7,
+                            19
+                        ],
+                        "line": "    // BrowserChild, this event is from within this call:",
+                        "lno": 751
+                    }
+                ],
+                "path": "devtools/server/actors/targets/browsing-context.js"
+            }
+        ],
+        "Uses (BrowserChild)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            12,
+                            24
+                        ],
+                        "context": "mozilla::a11y::NotificationController::WillRefresh",
+                        "contextsym": "_ZN7mozilla4a11y22NotificationController11WillRefreshENS_9TimeStampE,_ZN18nsARefreshObserver11WillRefreshEN7mozilla9TimeStampE",
+                        "line": "static_cast<BrowserChild*>(browserChild.get())",
+                        "lno": 926
+                    }
+                ],
+                "path": "accessible/base/NotificationController.cpp"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            16,
+                            28
+                        ],
+                        "context": "mozilla::a11y::DocAccessible::DoInitialUpdate",
+                        "contextsym": "_ZN7mozilla4a11y13DocAccessible15DoInitialUpdateEv",
+                        "line": "if (RefPtr<dom::BrowserChild> browserChild =",
+                        "lno": 1379
+                    },
+                    {
+                        "bounds": [
+                            5,
+                            17
+                        ],
+                        "context": "mozilla::a11y::DocAccessible::DoInitialUpdate",
+                        "contextsym": "_ZN7mozilla4a11y13DocAccessible15DoInitialUpdateEv",
+                        "line": "dom::BrowserChild::GetFrom(docShell)) {",
+                        "lno": 1380
+                    }
+                ],
+                "path": "accessible/generic/DocAccessible.cpp"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            12,
+                            24
+                        ],
+                        "context": "mozilla::dom::MaybeInvalidTabContext::MaybeInvalidTabContext",
+                        "contextsym": "_ZN7mozilla3dom22MaybeInvalidTabContextC1ERKNS0_13IPCTabContextE",
+                        "line": "static_cast<BrowserChild*>(ipcContext.opener().get_PBrowserChild());",
+                        "lno": 153
+                    }
+                ],
+                "path": "dom/ipc/TabContext.cpp"
+            }
+        ],
+        "Uses (BrowserChildMap)": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            7,
+                            19
+                        ],
+                        "context": "",
+                        "contextsym": "",
+                        "line": "static BrowserChildMap* sBrowserChildren;",
+                        "lno": 175
+                    },
+                    {
+                        "bounds": [
+                            23,
+                            35
+                        ],
+                        "context": "mozilla::dom::BrowserChild::InitRenderingState",
+                        "contextsym": "_ZN7mozilla3dom12BrowserChild18InitRenderingStateERKNS_6layers24TextureFactoryIdentifierERKNS2_8LayersIdERKNS2_17CompositorOptionsE",
+                        "line": "sBrowserChildren = new BrowserChildMap;",
+                        "lno": 2614
+                    }
+                ],
+                "path": "dom/ipc/BrowserChild.cpp"
+            }
+        ]
+    },
+    "test": {
+        "Textual Occurrences": [
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            43,
+                            55
+                        ],
+                        "line": "const MESSAGES = [\"CPStartup:Go\", \"Content:BrowserChildReady\"];",
+                        "lno": 30
+                    },
+                    {
+                        "bounds": [
+                            20,
+                            32
+                        ],
+                        "line": "      case \"Content:BrowserChildReady\": {",
+                        "lno": 77
+                    }
+                ],
+                "path": "testing/talos/talos/tests/cpstartup/extension/api.js"
+            },
+            {
+                "lines": [
+                    {
+                        "bounds": [
+                            28,
+                            40
+                        ],
+                        "line": "        .getInterface(Ci.nsIBrowserChild)",
+                        "lno": 175
+                    },
+                    {
+                        "bounds": [
+                            24,
+                            36
+                        ],
+                        "line": "      // as part of the BrowserChild, so we have to check those too.",
+                        "lno": 282
+                    }
+                ],
+                "path": "toolkit/components/windowwatcher/test/browser_new_content_window_chromeflags.js"
+            }
+        ]
+    }
+}
