@@ -162,7 +162,7 @@ impl<'de> Visitor<'de> for MatchesVisitor {
     {
         let mut matches = Matches::default();
 
-        while let Some((key, value)) = access.next_entry::<&'de str, Vec<RawMatch>>()? {
+        while let Some((key, value)) = access.next_entry::<String, Vec<RawMatch>>()? {
             if key == "Files" {
                 matches.files = RawMatch::into_paths(value);
             } else if key == "Textual Occurrences" {
@@ -187,10 +187,10 @@ impl<'de> Visitor<'de> for MatchesVisitor {
                         .uses
                         .insert(name.into(), RawMatch::into_hashmap(value));
                 } else {
-                    return Err(M::Error::unknown_field(key, EXPECTED_FIELDS));
+                    return Err(M::Error::unknown_field(&key, EXPECTED_FIELDS));
                 }
             } else {
-                return Err(M::Error::unknown_field(key, EXPECTED_FIELDS));
+                return Err(M::Error::unknown_field(&key, EXPECTED_FIELDS));
             }
         }
 
